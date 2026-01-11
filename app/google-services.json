@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "59168828370",
+    "project_id": "sekaiprofileviewer",
+    "storage_bucket": "sekaiprofileviewer.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59168828370:android:5d2cf818149c748297760b",
+        "android_client_info": {
+          "package_name": "com.nazwakhayla.sekaiprofileviewer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6duIa79zAXAOFdgiT7rZEd5TKT7ER3Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
