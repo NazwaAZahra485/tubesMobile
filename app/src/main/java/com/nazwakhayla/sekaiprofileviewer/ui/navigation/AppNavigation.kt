@@ -9,12 +9,12 @@ import androidx.navigation.compose.rememberNavController
 import com.nazwakhayla.sekaiprofileviewer.ui.page.CategoryIndexScreen
 import com.nazwakhayla.sekaiprofileviewer.ui.page.HomeScreen
 import com.nazwakhayla.sekaiprofileviewer.viewModel.AuthViewModel
-import com.nazwakhayla.sekaiprofileviewer.viewModel.CategoryViewModel
+import com.nazwakhayla.sekaiprofileviewer.viewModel.CharacterViewModel
 
 @Composable
 fun AppNavigation(authViewModel: AuthViewModel){
     val navController = rememberNavController()
-    val categoryViewModel : CategoryViewModel = viewModel()
+    val categoryViewModel : CharacterViewModel = viewModel()
 
     NavHost(navController = navController, startDestination = Route.HOME) {
         composable(Route.HOME) {
