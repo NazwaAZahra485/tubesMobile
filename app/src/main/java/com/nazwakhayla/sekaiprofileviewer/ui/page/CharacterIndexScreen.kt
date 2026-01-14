@@ -38,13 +38,6 @@ fun CategoryIndexScreen(characters: List<Character>, navController: NavControlle
                 title = { Text(text = "Nama Character") }
             )
         },
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = { navController.navigate(Route.CATEGORY_CREATE) }
-            ){
-                Icon(Icons.Default.Add, "FAB Add")
-            }
-        }
     ) { innerPadding ->
         CharacterIndexContent(characters = characters, Modifier.padding(innerPadding))
     }
@@ -73,10 +66,6 @@ fun CharacterItem(character: Character, modifier: Modifier = Modifier) {
             Text(
                 text = character.name,
                 style = MaterialTheme.typography.titleMedium
-            )
-            Text(
-                text = "Images available: ${character.imageUrls.size}",
-                style = MaterialTheme.typography.bodySmall
             )
         }
     }

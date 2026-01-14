@@ -10,6 +10,7 @@ import com.nazwakhayla.sekaiprofileviewer.ui.page.CategoryIndexScreen
 import com.nazwakhayla.sekaiprofileviewer.ui.page.HomeScreen
 import com.nazwakhayla.sekaiprofileviewer.viewModel.AuthViewModel
 import com.nazwakhayla.sekaiprofileviewer.viewModel.CharacterViewModel
+import com.nazwakhayla.sekaiprofileviewer.viewModel.UnitsViewModel
 
 @Composable
 fun AppNavigation(authViewModel: AuthViewModel){
