@@ -20,7 +20,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.nazwakhayla.sekaiprofileviewer.entity.SekaiUnit
@@ -76,9 +75,9 @@ fun HomeScreen(
                 items(units) { unit ->
                     UnitItem(
                         unit = unit,
-                        onMemberClick = { memberId ->
+                        onClick = {
                             // Navigate to character screen, optionally passing ID
-                            navController.navigate(Route.CATEGORY_INDEX)
+                            navController.navigate(Route.CHARACTER_INDEX)
                         }
                     )
                 }
@@ -91,7 +90,7 @@ fun HomeScreen(
 @Composable
 fun UnitItem(
     unit: SekaiUnit,
-    onMemberClick: (Long) -> Unit,
+    onClick: (Long) -> Unit,
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -129,7 +128,7 @@ fun UnitItem(
                     modifier = Modifier.padding(vertical = 8.dp)
                 ) {
                     items(unit.members) { memberId ->
-                        MemberChip(id = memberId, onClick = { onMemberClick(memberId) })
+                        MemberChip(id = memberId, onClick = { onClick(memberId) })
                     }
                 }
 
@@ -140,7 +139,7 @@ fun UnitItem(
                     modifier = Modifier.padding(vertical = 8.dp)
                 ) {
                     items(unit.main_vs) { vsId ->
-                        MemberChip(id = vsId, onClick = { onMemberClick(vsId) })
+                        MemberChip(id = vsId, onClick = { onClick(vsId) })
                     }
                 }
 
